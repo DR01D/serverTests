@@ -8,8 +8,9 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/test/", (req, res) => {
-    res.send('hello world');
+app.get("/test", (req, res) => {
+    res.redirect('https://www.google.com');
+    // res.send(req.accepts(['json', 'text']));
 });
 
 app.use(express.static("public"));
